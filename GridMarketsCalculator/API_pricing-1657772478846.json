@@ -1,0 +1,1883 @@
+{
+	"data": {
+		"meta_data": {
+			"machine_types": [
+				"GM1600",
+				"GM4800",
+				"GM9600",
+				"GM6400",
+				"1xP100:OB220",
+				"2xP100:OB440",
+				"1xV100:OB330"
+			],
+			"plans": [
+				"Economy",
+				"Standard",
+				"Rush"
+			],
+			"services": [
+				"3ds Max",
+				"Arnold for 3ds Max",
+				"Arnold for Cinema 4D",
+				"Arnold for Houdini",
+				"Arnold for Maya",
+				"Blender",
+				"Cinema 4D",
+				"Houdini",
+				"Maya",
+				"Nuke",
+				"Nuke for Houdini",
+				"Redshift for 3ds Max",
+				"Redshift for Cinema 4D",
+				"Redshift for Houdini",
+				"Redshift for Maya",
+				"RenderMan for Houdini",
+				"RenderMan for Maya",
+				"Transcode for Houdini",
+				"V-Ray Standalone",
+				"V-Ray for 3ds Max",
+				"V-Ray for Blender",
+				"V-Ray for Cinema 4D",
+				"V-Ray for Houdini",
+				"V-Ray for Maya"
+			]
+		},
+		"pricing": {
+			"1xP100:OB220": {
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 3.3391,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.2608,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.1739,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 1.6542,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.1015,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.0677,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 1.5207,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.8514,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.9009,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 3.9014,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.3152,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8768,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 0.3761,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.7052,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.4701,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 1.2946,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.4273,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.6182,
+						"max_machines": 30
+					}
+				},
+				"Redshift for 3ds Max": {
+					"Economy": {
+						"cost": 0.5905,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.1072,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.7381,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Cinema 4D": {
+					"Economy": {
+						"cost": 2.4187,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.5351,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.0234,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Houdini": {
+					"Economy": {
+						"cost": 0.3347,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.6276,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.4184,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Maya": {
+					"Economy": {
+						"cost": 0.2349,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.4404,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.2936,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 1.1656,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.1855,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.457,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 3.7993,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.1237,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.7491,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 1.1505,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.1571,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.4381,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 3.2266,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.0499,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.0333,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 2.703,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.0682,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.3788,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 3.8615,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.2404,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8269,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 1.8691,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.5046,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.3364,
+						"max_machines": 30
+					}
+				}
+			},
+			"1xV100:OB330": {
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 3.7958,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.1172,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.7448,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 1.725,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.2343,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.1562,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 3.7982,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.1217,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.7478,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 0.2099,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.3936,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.2624,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 3.9462,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.399,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.9327,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 3.488,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.54,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.36,
+						"max_machines": 30
+					}
+				},
+				"Redshift for 3ds Max": {
+					"Economy": {
+						"cost": 3.1787,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.9601,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.9734,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Cinema 4D": {
+					"Economy": {
+						"cost": 2.3871,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.4759,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.9839,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Houdini": {
+					"Economy": {
+						"cost": 0.646,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.2112,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.8075,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Maya": {
+					"Economy": {
+						"cost": 2.4657,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.6231,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.0821,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 2.904,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.445,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.63,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 2.1013,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.9399,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.6266,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 3.8956,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.3043,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8695,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 1.4722,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.7605,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.8403,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 1.383,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.593,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.7287,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 3.6343,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.8144,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.5429,
+						"max_machines": 30
+					}
+				}
+			},
+			"2xP100:OB440": {
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 1.2231,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.2933,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.5289,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 1.5235,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.8566,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.9044,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 2.2152,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.1535,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.769,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 1.5273,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.8636,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.9091,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 2.8162,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.2803,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.5202,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 2.6193,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.9111,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.2741,
+						"max_machines": 30
+					}
+				},
+				"Redshift for 3ds Max": {
+					"Economy": {
+						"cost": 1.4629,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.7429,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.8286,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Cinema 4D": {
+					"Economy": {
+						"cost": 1.7199,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.2249,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.1499,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Houdini": {
+					"Economy": {
+						"cost": 2.499,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.6857,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.1238,
+						"max_machines": 30
+					}
+				},
+				"Redshift for Maya": {
+					"Economy": {
+						"cost": 1.7375,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.2578,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.1719,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 2.4444,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.5832,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.0555,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 0.7759,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.4548,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.9699,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 2.4612,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.6147,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.0765,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 3.223,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.0431,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.0287,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 3.3108,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.2077,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.1385,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 3.0834,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.7814,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.8543,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 0.8547,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.6026,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.0684,
+						"max_machines": 30
+					}
+				}
+			},
+			"GM1600": {
+				"3ds Max": {
+					"Economy": {
+						"cost": 1.4439,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.7073,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.8049,
+						"max_machines": 30
+					}
+				},
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 3.317,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.2193,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.1462,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 0.8958,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.6797,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.1198,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 1.7892,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.3547,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.2365,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 1.9512,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.6585,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.439,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 0.6118,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.1471,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.7647,
+						"max_machines": 30
+					}
+				},
+				"Cinema 4D": {
+					"Economy": {
+						"cost": 2.5197,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.7244,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.1496,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 3.0688,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.754,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.836,
+						"max_machines": 30
+					}
+				},
+				"Maya": {
+					"Economy": {
+						"cost": 3.1624,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.9295,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.953,
+						"max_machines": 30
+					}
+				},
+				"Nuke": {
+					"Economy": {
+						"cost": 2.5388,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.7603,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.1735,
+						"max_machines": 30
+					}
+				},
+				"Nuke for Houdini": {
+					"Economy": {
+						"cost": 3.6292,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.8048,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.5365,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 0.6274,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.1763,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.7842,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 0.5887,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.1038,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.7359,
+						"max_machines": 30
+					}
+				},
+				"Transcode for Houdini": {
+					"Economy": {
+						"cost": 3.3766,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.3312,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.2208,
+						"max_machines": 30
+					}
+				},
+				"V-Ray Standalone": {
+					"Economy": {
+						"cost": 1.0933,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.0499,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.3666,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 1.8557,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.4794,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.3196,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 0.3017,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.5656,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.3771,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 1.3574,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.5451,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.6967,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 2.3906,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.4823,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.9882,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 1.5526,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.9111,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.9407,
+						"max_machines": 30
+					}
+				}
+			},
+			"GM4800": {
+				"3ds Max": {
+					"Economy": {
+						"cost": 0.7016,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.3155,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.877,
+						"max_machines": 30
+					}
+				},
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 3.547,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.6505,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.4337,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 2.7021,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.0664,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.3776,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 2.7923,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.2356,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.4904,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 3.996,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.4925,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.995,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 3.4604,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.4882,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.3255,
+						"max_machines": 30
+					}
+				},
+				"Cinema 4D": {
+					"Economy": {
+						"cost": 3.5103,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.5819,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.3879,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 2.9984,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.622,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.748,
+						"max_machines": 30
+					}
+				},
+				"Maya": {
+					"Economy": {
+						"cost": 2.5868,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.8502,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.2335,
+						"max_machines": 30
+					}
+				},
+				"Nuke": {
+					"Economy": {
+						"cost": 3.4382,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.4467,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.2978,
+						"max_machines": 30
+					}
+				},
+				"Nuke for Houdini": {
+					"Economy": {
+						"cost": 2.9043,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.4456,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.6304,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 2.6769,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.0191,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.3461,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 1.5382,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.8842,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.9228,
+						"max_machines": 30
+					}
+				},
+				"Transcode for Houdini": {
+					"Economy": {
+						"cost": 0.4773,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.8949,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.5966,
+						"max_machines": 30
+					}
+				},
+				"V-Ray Standalone": {
+					"Economy": {
+						"cost": 2.9121,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.4601,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.6401,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 2.111,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.9581,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.6387,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 3.8927,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.2988,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8659,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 3.4823,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.5293,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.3529,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 0.964,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.8075,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.205,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 1.3011,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.4396,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.6264,
+						"max_machines": 30
+					}
+				}
+			},
+			"GM6400": {
+				"3ds Max": {
+					"Economy": {
+						"cost": 1.9722,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.698,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.4653,
+						"max_machines": 30
+					}
+				},
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 0.5842,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.0953,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.7302,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 3.6758,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.8922,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.5948,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 2.4845,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.6584,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.1056,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 0.7156,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.3417,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.8945,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 0.7926,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.4862,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.9908,
+						"max_machines": 30
+					}
+				},
+				"Cinema 4D": {
+					"Economy": {
+						"cost": 3.7803,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.0881,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.7254,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 3.1819,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.9661,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.9774,
+						"max_machines": 30
+					}
+				},
+				"Maya": {
+					"Economy": {
+						"cost": 2.8165,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.2809,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.5206,
+						"max_machines": 30
+					}
+				},
+				"Nuke": {
+					"Economy": {
+						"cost": 3.574,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.7012,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.4675,
+						"max_machines": 30
+					}
+				},
+				"Nuke for Houdini": {
+					"Economy": {
+						"cost": 1.071,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.008,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.3387,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 0.7266,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.3623,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.9082,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 2.266,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.2488,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.8325,
+						"max_machines": 30
+					}
+				},
+				"Transcode for Houdini": {
+					"Economy": {
+						"cost": 3.6006,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.7511,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.5007,
+						"max_machines": 30
+					}
+				},
+				"V-Ray Standalone": {
+					"Economy": {
+						"cost": 0.735,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.378,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.9187,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 3.9486,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.4036,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.9357,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 0.8394,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.5739,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.0493,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 1.7812,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.3397,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.2265,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 3.845,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.2093,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8062,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 1.2686,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.3787,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.5858,
+						"max_machines": 30
+					}
+				}
+			},
+			"GM9600": {
+				"3ds Max": {
+					"Economy": {
+						"cost": 3.2662,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.1242,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.0828,
+						"max_machines": 30
+					}
+				},
+				"Arnold for 3ds Max": {
+					"Economy": {
+						"cost": 0.3122,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.5853,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.3902,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Cinema 4D": {
+					"Economy": {
+						"cost": 0.7048,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.3215,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.881,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Houdini": {
+					"Economy": {
+						"cost": 3.4412,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.4522,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.3015,
+						"max_machines": 30
+					}
+				},
+				"Arnold for Maya": {
+					"Economy": {
+						"cost": 3.2027,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.0051,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.0034,
+						"max_machines": 30
+					}
+				},
+				"Blender": {
+					"Economy": {
+						"cost": 3.7169,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.9691,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.6461,
+						"max_machines": 30
+					}
+				},
+				"Cinema 4D": {
+					"Economy": {
+						"cost": 0.4417,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.8282,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.5521,
+						"max_machines": 30
+					}
+				},
+				"Houdini": {
+					"Economy": {
+						"cost": 1.8324,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 3.4358,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.2905,
+						"max_machines": 30
+					}
+				},
+				"Maya": {
+					"Economy": {
+						"cost": 2.9416,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.5155,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.677,
+						"max_machines": 30
+					}
+				},
+				"Nuke": {
+					"Economy": {
+						"cost": 3.5398,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.637,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.4247,
+						"max_machines": 30
+					}
+				},
+				"Nuke for Houdini": {
+					"Economy": {
+						"cost": 3.8503,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.2193,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.8129,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Houdini": {
+					"Economy": {
+						"cost": 0.938,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.7588,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.1725,
+						"max_machines": 30
+					}
+				},
+				"RenderMan for Maya": {
+					"Economy": {
+						"cost": 3.6653,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.8724,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.5816,
+						"max_machines": 30
+					}
+				},
+				"Transcode for Houdini": {
+					"Economy": {
+						"cost": 0.3123,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 0.5856,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 0.3904,
+						"max_machines": 30
+					}
+				},
+				"V-Ray Standalone": {
+					"Economy": {
+						"cost": 0.9189,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 1.7229,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.1486,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for 3ds Max": {
+					"Economy": {
+						"cost": 3.8397,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 7.1994,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.7996,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Blender": {
+					"Economy": {
+						"cost": 2.8569,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 5.3567,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 3.5711,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Cinema 4D": {
+					"Economy": {
+						"cost": 1.1954,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 2.2413,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 1.4942,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Houdini": {
+					"Economy": {
+						"cost": 2.3513,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 4.4086,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 2.9391,
+						"max_machines": 30
+					}
+				},
+				"V-Ray for Maya": {
+					"Economy": {
+						"cost": 3.2439,
+						"max_machines": 5
+					},
+					"Rush": {
+						"cost": 6.0823,
+						"max_machines": 60
+					},
+					"Standard": {
+						"cost": 4.0549,
+						"max_machines": 30
+					}
+				}
+			}
+		}
+	},
+	"status": 200
+}
