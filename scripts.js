@@ -30,8 +30,28 @@ fetch("API_pricing-1657772478846.json")
         option.text = machinePlans[i]
 
         document.getElementById('plans-dropdown').add(option)
-    } 
+    }
+
 });
 
+inputs = [];
+const calculate = (event) =>{
+    event.preventDefault();
+    let input = {
+        machine: document.getElementById('machine-dropdown').value,
+        renderer: document.getElementById('renderer-dropdown').value,
+        plans: document.getElementById('plans-dropdown').value,
+        totalframes: document.getElementById('totalFrames-input').value,
+        averageframes: document.getElementById('AVGframes-input').value
+    }
+    inputs.push(input);
+    document.forms[0].reset();
+    
+    console.warn('added', {inputs} );
+    let pre = document.querySelector('#msg pre')
+    pre.textContent = '\n' + JSON.stringify(inputs, '\t', 2)
+}
 
-
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('btn').addEventListener('click', calculate)
+})

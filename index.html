@@ -11,22 +11,28 @@
 </head>
 <body>
     <h1>Gridmarkets Calculator 2</h1>
-    <div>
-    <label for="machine">Machine: </label>    
-    <select id="machine-dropdown" name="machine"></select>
-    <br>
-    <label for="renderer">Renderer: </label>
-    <select id="renderer-dropdown" name="renderer"></select>
-    <br>
-    <label for="plans">Speed: </label>
-    <select id="plans-dropdown" name="plans"></select>
-    <br>
-    <label for="Totalframes">Total Frames: </label>
-    <input type="number">
-    <br>
-    <label for="AVGframes">Average Frames per minute: </label>
-    <input type="number">
+        <form>
+            <label for="machine">Machine: </label>    
+            <select id="machine-dropdown" name="machine"></select>
+            <br>
+            <label for="renderer">Renderer: </label>
+            <select id="renderer-dropdown" name="renderer"></select>
+            <br>
+            <label for="plans">Speed: </label>
+            <select id="plans-dropdown" name="plans"></select>
+            <br>
+            <label for="Totalframes">Total Frames: </label>
+            <input id="totalFrames-input" type="number">
+            <br>
+            <label for="AVGframes">Average Frames per minute: </label>
+            <input id="AVGframes-input" type="number">
+            <br>
+            <button id="btn">Calculate</button>
+            <button onlick="calculate()">Calculate2</button>
 
-</div>
+            <div id="msg">
+                <pre></pre>
+            </div>
+        </form>
 </body>
 </html>
