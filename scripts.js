@@ -2,28 +2,59 @@ fetch("API_pricing-1657772478846.json")
 .then(function(resp) {return resp.json() })
 .then(function(data) {
     
-    machineTypes = data.data.meta_data.machine_types
-    machineServices = data.data.meta_data.services
+    machineTypes = Object.keys(data.data.pricing)
+    machineServices = data.data.pricing
     machinePlans = data.data.meta_data.plans
     machinePricing = data.data.pricing
 
-    //console.log(machineServices)
+    //machineServices.forEach((element)=>{console.log(element)});
 
+    //for (item in machineServices) {console.log(machineServices[item])}
+    //for (item in machineServices) {
+    //    for (inner in machineServices[item]) {
+    //        //console.log(machineServices[item][inner]);
+    //    }
+    //} 
+
+    //console.log(data.data.pricing)
+
+   
     for (i = 0; i < machineTypes.length; i++){
-
         option = document.createElement('option')
         option.text = machineTypes[i]
 
         document.getElementById('machine-dropdown').add(option)
-
+        
+        
     }
 
-    for (i = 0; i < machineServices.length; i++){
-        option = document.createElement('option')
-        option.text = machineServices[i]
+    document
+    .getElementById("machine-dropdown")
+    .addEventListener("change", (e) => {
+      console.log(Object.keys(data.data.pricing[e.target.value]));
+      
+    });
 
-        document.getElementById('renderer-dropdown').add(option)
-    } 
+
+
+    for (item in machineServices) {
+        optionTwo = document.createElement("option");
+        for (j = 0; i < Object.keys(machineServices[item]).length; i++) {
+          console.log(Object.keys(machineServices[item])[j]);
+          optionTwo.text = Object.keys(machineServices[item])[j];
+          document.getElementById("renderer-dropdown").add(optionTwo);
+        }
+      }
+
+    //for (i = 0; i < machineServices.length; i++){
+    //    option = document.createElement('option')
+    //    option.text = machineServices[i]
+    //    document.getElementById('renderer-dropdown').add(option)
+//
+    //    //const rendererItems = document.createElement("option")
+    //    //rendererItems.text= machineServices[i];
+    //    //document.getElementById("renderer-dropdown").add(rendererItems);
+    //} 
 
     for (i = 0; i < machinePlans.length; i++){
         option = document.createElement('option')
