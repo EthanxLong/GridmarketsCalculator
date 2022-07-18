@@ -6,7 +6,7 @@ fetch("API_pricing-1657772478846.json")
     
     
     machineTypes = Object.keys(data.data.pricing)
-    machineServices = data.data.pricing
+    machineServices = Object.keys(data.data.pricing)
     machinePlans = data.data.meta_data.plans
     machinePricing = data.data.pricing
 
@@ -26,15 +26,39 @@ fetch("API_pricing-1657772478846.json")
         option = document.createElement('option')
         option.text = machineTypes[i]
         document.getElementById('machine-dropdown').add(option)
-        
-        
     }
 
-    for (i = 0; i < machineServices.length; i++){
-        option = document.createElement('option')
-        option.text = machineServices[i]
-        document.getElementById('renderer-dropdown').add(option)
-    } 
+    //function removeOptions(selectElement) {
+    //    var i, L = selectElement.options.length - 1;
+    //    for(i = L; i >= 0; i--) {
+    //       selectElement.remove(i);
+    //    }
+    // }
+     
+     // using the function:
+     
+
+    document
+        .getElementById("machine-dropdown")
+        .addEventListener("change", (e) => {
+          
+          selectedRenderer = Object.keys(data.data.pricing[e.target.value])
+
+          if ($('#renderer-dropdown option').length) 
+
+          for (i = 0; i < selectedRenderer.length; i++){
+            option = document.createElement('option')
+            option.text = selectedRenderer[i]
+            document.getElementById('renderer-dropdown').add(option)
+          }
+          console.log($('#renderer-dropdown option').length);
+        });
+
+    //for (i = 0; i < machineServices.length; i++){
+    //    option = document.createElement('option')
+    //    option.text = machineServices[i]
+    //    document.getElementById('renderer-dropdown').add(option)
+    //} 
 
     for (i = 0; i < machinePlans.length; i++){
         option = document.createElement('option')
