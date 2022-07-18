@@ -2,106 +2,89 @@ fetch("API_pricing-1657772478846.json")
 .then(function(resp) {return resp.json() })
 .then(function(data) {
 
-    console.log(data.data.pricing)
     
     
     machineTypes = Object.keys(data.data.pricing)
-    machineServices = Object.keys(data.data.pricing)
-    machinePlans = data.data.meta_data.plans
-    machinePricing = data.data.pricing
-
-    //machineServices.forEach((element)=>{console.log(element)});
-
-    //for (item in machineServices) {console.log(machineServices[item])}
-    //for (item in machineServices) {
-    //    for (inner in machineServices[item]) {
-    //        //console.log(machineServices[item][inner]);
-    //    }
-    //} 
-
-    //console.log(data.data.pricing)
-
-   
+    
     for (i = 0; i < machineTypes.length; i++){
         option = document.createElement('option')
         option.text = machineTypes[i]
         document.getElementById('machine-dropdown').add(option)
     }
 
-    //function removeOptions(selectElement) {
-    //    var i, L = selectElement.options.length - 1;
-    //    for(i = L; i >= 0; i--) {
-    //       selectElement.remove(i);
-    //    }
-    // }
-     
-     // using the function:
-     
-
     document
         .getElementById("machine-dropdown")
         .addEventListener("change", (e) => {
-          
-          selectedRenderer = Object.keys(data.data.pricing[e.target.value])
+          machineValue = document.getElementById('machine-dropdown').value
+          renderValue = document.getElementById('renderer-dropdown').value
+          machine = e.target.value
+          rendererArray = Object.keys(data.data.pricing[machine])
 
-          if ($('#renderer-dropdown option').length) 
+          // if user selected render is not in the array of possible renderers.
+          // then empty, and repopulate dropdown
 
-          for (i = 0; i < selectedRenderer.length; i++){
-            option = document.createElement('option')
-            option.text = selectedRenderer[i]
-            document.getElementById('renderer-dropdown').add(option)
+          if (!(rendererArray.includes(renderValue))){
+            $("#renderer-dropdown").empty();
+            $('#renderer-dropdown').append('<option value="" disabled selected>Select Service </option>')
+            for (i = 0; i < rendererArray.length; i++){
+                option = document.createElement('option')
+                option.text = rendererArray[i]
+                document.getElementById('renderer-dropdown').add(option)
+              } 
+             console.log(rendererArray) 
           }
-          console.log($('#renderer-dropdown option').length);
+    
         });
 
-    //for (i = 0; i < machineServices.length; i++){
-    //    option = document.createElement('option')
-    //    option.text = machineServices[i]
-    //    document.getElementById('renderer-dropdown').add(option)
-    //} 
+        document
+        .getElementById("renderer-dropdown")
+        .addEventListener("change", (ev) => {
+          speed = ev.target.value
+          machineValue = document.getElementById('machine-dropdown').value
+          renderValue = document.getElementById('renderer-dropdown').value
+          planValue = document.getElementById('plans-dropdown').value
 
-    for (i = 0; i < machinePlans.length; i++){
-        option = document.createElement('option')
-        option.text = machinePlans[i]
-        document.getElementById('plans-dropdown').add(option)
+          selectedSpeed = Object.keys(data.data.pricing[machineValue][renderValue])
+          
+          if (!(selectedSpeed.includes(planValue))){
+            $('#plans-dropdown').empty();
+            $('#plans-dropdown').append('<option value="" disabled selected>Select Plan </option>')
+            for (i = 0; i < selectedSpeed.length; i++){
+                option = document.createElement('option')
+                option.text = selectedSpeed[i]
+                document.getElementById("plans-dropdown").add(option)
+              }
+          }
+          
+          
+        });
+        
+
+    document.getElementById("btn").addEventListener("click", myFunction);
+
+    function myFunction() {
+
+        machineValue = document.getElementById("machine-dropdown").value
+        renderValue = document.getElementById("renderer-dropdown").value
+        plansValue = document.getElementById("plans-dropdown").value
+
+        averageframesInput = document.getElementById("AVGframes-input").value
+        totalframesInput = document.getElementById("totalFrames-input").value
+
+        machineCost = data.data.pricing[machineValue][renderValue][plansValue].cost
+
+        
+        price = (averageframesInput/60) * (totalframesInput * machineCost)
+        
+        if ($("#output").length > 0){
+            $("#output").empty()
+        }
+        document.getElementById("output").innerHTML += "Cost: " + price.toFixed(2);
+
+        
     }
 
+        
 });
 
-inputs = [];
-const calculate = (event) =>{
-    event.preventDefault();
-    let input = {
-        machineInput: document.getElementById('machine-dropdown').value,
-        rendererInput: document.getElementById('renderer-dropdown').value,
-        plansInput: document.getElementById('plans-dropdown').value,
-        totalframesInput: document.getElementById('totalFrames-input').value,
-        averageframesInput: document.getElementById('AVGframes-input').value
-    }
-    inputs.push(input);
 
-    let machineInput = inputs[0].machineInput
-    let rendererInput = inputs[0].rendererInput
-    let plansInput = inputs[0].plansInput
-    let totalframesInput = inputs[0].totalframesInput
-    let averageframesInput = inputs[0].averageframesInput
-    
-    // console.log(machineInput)
-    // document.forms[0].reset();
-    
-    
-    fetch("API_pricing-1657772478846.json")
-    .then(function(resp) {return resp.json() })
-    .then(function(data) {
-        machinePrice = data.data.pricing[machineInput][rendererInput][plansInput].cost
-        
-        
-        let price = (averageframesInput/60) * (totalframesInput * machinePrice)
-        document.getElementById('output').innerHTML = price
-
-    })
-}
-
-document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('btn').addEventListener('click', calculate)
-})
