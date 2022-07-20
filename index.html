@@ -10,13 +10,14 @@
     <title>Gridmarkets Calculator</title>
 </head>
 <body>
-    <h1>Gridmarkets Calculator 2</h1> 
+    <h1>Gridmarkets Calculator 2</h1>
+    <select id="renderer-dropdown" name="renderer">
+        <option value="" disabled selected>Choose Service</option>
+    </select> 
+           
+            <br>
             <select id="machine-dropdown" name="machine">
                 <option value="" disabled selected>Select Machine</option>
-            </select>
-            <br>
-            <select id="renderer-dropdown" name="renderer">
-                <option value="" disabled selected>Choose Service</option>
             </select>
             <br>
             <select id="plans-dropdown" name="plans">
@@ -26,7 +27,7 @@
             <label for="Totalframes">Total Frames: </label>
             <input id="totalFrames-input" type="number">
             <br>
-            <label for="AVGframes">Average Frames per minute: </label>
+            <label for="AVGframes">Average minutes per frame: </label>
             <input id="AVGframes-input" type="number">
             <br>
             <button id="btn">Calculate</button>
