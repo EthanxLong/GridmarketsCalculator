@@ -20,9 +20,7 @@ fetch("API_pricing-1657772478846.json")
           machine = e.target.value
           rendererArray = Object.keys(data.data.pricing[machine])
 
-          // if user selected render is not in the array of possible renderers.
-          // then empty, and repopulate dropdown
-
+          
           if (!(rendererArray.includes(renderValue))){
             $("#renderer-dropdown").empty();
             $('#renderer-dropdown').append('<option value="" disabled selected>Select Service </option>')
@@ -33,6 +31,8 @@ fetch("API_pricing-1657772478846.json")
               } 
              console.log(rendererArray) 
           }
+
+
     
         });
 
