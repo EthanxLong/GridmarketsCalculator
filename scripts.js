@@ -2,15 +2,12 @@
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
 //  headers: {
-//    'GridMarkets-Pricing-APIKey': '654075bd-f0b2-4e11-8362-ba4cf0591a16',
+//    'GridMarkets-Pricing-APIKey':,
 //  },
 //})
 //.then(function(resp) {return resp.json() })
 fetch("API_pricing-1657772478846.json", {
-  method: 'GET',
-  headers: {
-    'GridMarkets-Pricing-APIKey': '654075bd-f0b2-4e11-8362-ba4cf0591a16',
-  },
+  method: 'GET'
 })
 .then(function(resp) {return resp.json() })
 .then(function(data) {
@@ -77,36 +74,13 @@ fetch("API_pricing-1657772478846.json", {
 
           lst1 = [];
 
-          //if (!(selectedSpeed.includes(planValue))){
-          //  $('#plans-dropdown').empty();
-          //  $('#plans-dropdown').append('<option value="" disabled selected>Select Plan </option>')
-          //  for (i = 0; i < selectedSpeed.length; i++){
-          //      lst1.push(selectedSpeed[i])
-          //    }
-          //}
-
-          //lst1.sort(function(a, b) {
-          //  return sortedPlansList.indexOf(a) - sortedPlansList.indexOf(b)
-          //})
-//
-          //for (i = 0; i < lst1.length; i++){
-          //  option = document.createElement('option')
-          //      option.text = lst1[i]
-          //      document.getElementById("plans-dropdown").add(option)
-          //}
-
 });
-
-
-
-        
 
     document.getElementById("btn").addEventListener("click", myFunction);   
     function myFunction() {
     
         machineValue = document.getElementById("machine-dropdown").value
         renderValue = document.getElementById("renderer-dropdown").value
-        //plansValue = document.getElementById("plans-dropdown").value
     
         averageframesInput = document.getElementById("AVGframes-input").value
         totalframesInput = document.getElementById("totalFrames-input").value
@@ -135,23 +109,16 @@ fetch("API_pricing-1657772478846.json", {
         
         for (i = 0; i < oldLst.length; i++){
           plan = oldLst[i]
-          frameBucket = averageframesInput/machineCost[plan].max_machines
+          conc = machineCost[plan].max_machines
 
+          estWall = (totalframesInput > conc) ? (averageframesInput * Math.ceil(totalframesInput/conc)) : averageframesInput
           price = (averageframesInput/60) * (totalframesInput * machineCost[plan].cost)
-          time = frameBucket * averageframesInput
-          document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
-          //document.getElementById("time").innerHTML += averageframesInput + "<br/>";
-        }
-        
 
-        //for (i = 0; i <)
-        //for (const [key, value] of Object.entries(machineCost)) {
-        //        document.createElement('p')
-        //        price = (averageframesInput/60) * (totalframesInput * machineCost[key].cost)
-        //        document.getElementById("cost").innerHTML += key + ": " + price.toFixed(2) + " ";
-        //  }
-        //document.getElementById("cost").innerHTML += "Cost: " + price.toFixed(2);
-      
+          time = Math.floor(estWall/60) + "hrs and " + (estWall % 60).toFixed(0) + " mins"
+          document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
+          document.getElementById("time").innerHTML += time + "<br/>";
+          
+        }
         
     }   
         
