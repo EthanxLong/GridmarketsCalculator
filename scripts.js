@@ -36,7 +36,6 @@ fetch("API_pricing-1657772478846.json", {
           renderer = e.target.value
           machineArray = data.data.pricing
 
-          //console.log(Object.entries(machineArray))
           lst = [];
           newlst = [];
 
@@ -68,7 +67,6 @@ fetch("API_pricing-1657772478846.json", {
           speed = ev.target.value
           machineValue = document.getElementById('machine-dropdown').value
           renderValue = document.getElementById('renderer-dropdown').value
-          //planValue = document.getElementById('plans-dropdown').value
 
           selectedSpeed = Object.keys(data.data.pricing[machineValue][renderValue])
 
@@ -114,7 +112,12 @@ fetch("API_pricing-1657772478846.json", {
           estWall = (totalframesInput > conc) ? (averageframesInput * Math.ceil(totalframesInput/conc)) : averageframesInput
           price = (averageframesInput/60) * (totalframesInput * machineCost[plan].cost)
 
-          time = Math.floor(estWall/60) + "hrs and " + (estWall % 60).toFixed(0) + " mins"
+          time = Math.floor(estWall/60) + "h " + (estWall % 60).toFixed(0) + "m"
+
+          if (Math.floor(estWall/60) == 0){
+            time = (estWall % 60).toFixed(0) + "m"
+          }
+
           document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
           document.getElementById("time").innerHTML += time + "<br/>";
           
