@@ -1,3 +1,12 @@
+tailwind.config = {
+  theme : {
+    extend : {
+      colors : {
+        clifford: '#da373d'
+      }
+    }
+  }
+}
 
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
