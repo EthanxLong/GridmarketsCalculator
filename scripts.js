@@ -1,3 +1,17 @@
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        var head = document.getElementsByTagName('HEAD')[0];
+        // Create new link Element
+        var link = document.createElement('link');
+        // set the attributes for link element
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'mobileStyle.css';
+        // Append link element to HTML head
+        head.appendChild(link);
+} else {
+
+}
+
 
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
@@ -18,11 +32,45 @@ fetch("API_pricing-1657772478846.json", {
     machineServices = data.data.meta_data.services
     sortedPlansList = data.data.meta_data.plans
     
+    console.log(data)
+    softwareList = [];
+
     for (i = 0; i < machineServices.length; i++){
-        option = document.createElement('option')
-        option.text = machineServices[i]
-        document.getElementById('renderer-dropdown').add(option)
-    }
+      option = document.createElement('option')
+      word = machineServices[i]
+        if (!(word.includes('-'))){
+          option.text = word
+          document.getElementById('software-dropdown').add(option)
+          softwareList.push(word)
+        } 
+  }
+
+  document
+      .getElementById("software-dropdown")
+      .addEventListener("change", (e) => {
+        softwareValue = document.getElementById('software-dropdown').value
+        software = e.target.value
+        machineServices = data.data.meta_data.services
+
+        lst = []
+        newlst = []
+
+        if (!(lst.includes(software))){
+          $("#renderer-dropdown").empty();
+          $('#renderer-dropdown').append('<option value="" disabled selected>Select Renderer </option>') 
+          for(i = 0; i < machineServices.length; i++){
+            if (machineServices[i].includes(software)){
+              lst.push(machineServices[i])
+            }
+          }
+          for (i = 0; i < lst.length; i++){
+            option = document.createElement('option')
+            option.text = lst[i]
+            document.getElementById('renderer-dropdown').add(option)
+          }
+        }
+        
+})
 
     
 

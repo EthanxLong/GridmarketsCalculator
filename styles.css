@@ -10,6 +10,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+
 .container {
     display: flex;
     flex-direction: row;
@@ -63,6 +64,17 @@ input[type=number] {
         overflow: hidden;
 }
 
+#software-dropdown{
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    font-size: 18px;
+    color: white;
+    background-color: #1f2937;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 #totalFrames-input{
     height: 32px;
 }
@@ -75,3 +87,4 @@ p{
 color: #1f2937;
 font-size: larger;
 }
+
