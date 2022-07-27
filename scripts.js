@@ -1,33 +1,22 @@
-tailwind.config = {
-  theme : {
-    extend : {
-      colors : {
-        clifford: '#da373d'
-      }
-    }
-  }
-}
 
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
 //  headers: {
-//    'GridMarkets-Pricing-APIKey':,
+//    'GridMarkets-Pricing-APIKey':  '654075bd-f0b2-4e11-8362-ba4cf0591a16',
 //  },
 //})
 //.then(function(resp) {return resp.json() })
 fetch("API_pricing-1657772478846.json", {
-  method: 'GET'
+  headers: {
+    'GridMarkets-Pricing-APIKey': '654075bd-f0b2-4e11-8362-ba4cf0591a16'
+}
 })
 .then(function(resp) {return resp.json() })
 .then(function(data) {
-
-    
     sortedMachineList = data.data.meta_data.machine_types
     machineTypes = Object.keys(data.data.pricing)
     machineServices = data.data.meta_data.services
     sortedPlansList = data.data.meta_data.plans
-
-    //console.log(data.data.pricing)
     
     for (i = 0; i < machineServices.length; i++){
         option = document.createElement('option')
@@ -50,7 +39,7 @@ fetch("API_pricing-1657772478846.json", {
 
           if (!(lst.includes(machineValue))){
             $("#machine-dropdown").empty();
-            $('#machine-dropdown').append('<option value="" disabled selected>Select Service </option>')
+            $('#machine-dropdown').append('<option value="" disabled selected>Select Machine </option>')
             for (const [key, value] of Object.entries(data.data.pricing)) {
               if (renderValue in value){
                 lst.push(key)
@@ -126,6 +115,9 @@ fetch("API_pricing-1657772478846.json", {
           if (Math.floor(estWall/60) == 0){
             time = (estWall % 60).toFixed(0) + "m"
           }
+
+          document.getElementById("display1").innerHTML = "Cost in Credits";
+          document.getElementById("display2").innerHTML = "Time (hour/mins)";          
 
           document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
           document.getElementById("time").innerHTML += time + "<br/>";

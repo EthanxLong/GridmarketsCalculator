@@ -1,8 +1,18 @@
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px
 }
 
 .container2 {
@@ -18,8 +28,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 150px;
     flex-direction: row;
-    
 }
 
+.item {
+    margin: 10px
+}
+
+#renderer-dropdown{
+        width: auto;
+        height: auto;
+        border: 2px solid black;
+        font-size: 18px;
+        color: white;
+        background-color: #1f2937;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+
+#machine-dropdown{
+        width: auto;
+        height: auto;
+        border: 2px solid black;
+        font-size: 18px;
+        color: white;
+        background-color: #1f2937;
+        border-radius: 5px;
+        overflow: hidden;
+}
+
+#totalFrames-input{
+    height: 32px;
+}
+
+#AVGframes-input{
+    height: 32px;
+}
+
+p{
+color: #1f2937;
+font-size: larger;
+}
