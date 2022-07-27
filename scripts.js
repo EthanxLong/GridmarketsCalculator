@@ -8,7 +8,7 @@
 //.then(function(resp) {return resp.json() })
 fetch("API_pricing-1657772478846.json", {
   headers: {
-    'GridMarkets-Pricing-APIKey': '654075bd-f0b2-4e11-8362-ba4cf0591a16'
+    'GridMarkets-Pricing-APIKey': ''
 }
 })
 .then(function(resp) {return resp.json() })
