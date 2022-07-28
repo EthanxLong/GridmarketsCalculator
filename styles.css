@@ -75,15 +75,14 @@ input[type=number] {
     overflow: hidden;
 }
 
-#totalFrames-input{
-    height: 32px;
-}
 
-#totalRenderTime-input, #countTestFrame-input{
+#totalRenderTime-input, #countTestFrame-input, #totalFrames-input{
     height: 32px;
+    width: 150px;
 }
 
 p{
 color: #1f2937;
 font-size: larger;
 }
+
