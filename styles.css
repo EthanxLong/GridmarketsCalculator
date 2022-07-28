@@ -42,7 +42,7 @@ input[type=number] {
 }
 
 #renderer-dropdown{
-        width: auto;
+        width: 200px;
         height: auto;
         border: 2px solid black;
         font-size: 18px;
@@ -79,7 +79,7 @@ input[type=number] {
     height: 32px;
 }
 
-#AVGframes-input{
+#totalRenderTime-input, #countTestFrame-input{
     height: 32px;
 }
 

@@ -8,10 +8,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   link.href = 'mobileStyle.css';
   // Append link element to HTML head
   head.appendChild(link);
-} else {
-
 }
-
 
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
@@ -130,8 +127,13 @@ function myFunction() {
   machineValue = document.getElementById("machine-dropdown").value
   renderValue = document.getElementById("renderer-dropdown").value
 
-  averageframesInput = document.getElementById("AVGframes-input").value
+  tRenTimeInput = document.getElementById("totalRenderTime-input").value
   totalframesInput = document.getElementById("totalFrames-input").value
+  cTestFrameInput = document.getElementById("countTestFrame-input").value
+
+
+  averageframesInput = (tRenTimeInput/cTestFrameInput)
+
 
   machineCost = data.data.pricing[machineValue][renderValue]
 
