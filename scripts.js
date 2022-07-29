@@ -1,3 +1,4 @@
+
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   var head = document.getElementsByTagName('HEAD')[0];
   // Create new link Element
@@ -170,6 +171,8 @@ function myFunction() {
       time = (estWall % 60).toFixed(0) + "m"
     }
 
+    document.getElementById("container3").style.border = "solid #1c4cd3"
+
     document.getElementById("display1").innerHTML = "Cost in Credits";
     document.getElementById("display2").innerHTML = "Time (hour/mins)";          
 
@@ -180,4 +183,17 @@ function myFunction() {
   
 }   
   
+});
+
+// JavaScript for label effects only
+$(window).load(function(){
+  $(".col-3 input").val("");
+  
+  $(".input-effect input").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  })
 });

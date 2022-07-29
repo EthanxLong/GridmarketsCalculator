@@ -1,3 +1,11 @@
+body {
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -43,34 +51,34 @@ input[type=number] {
 
 #renderer-dropdown{
         width: 200px;
-        height: auto;
-        border: 2px solid black;
+        height: 32px;
+        border: 2px solid #1c4cd3;
         font-size: 18px;
         color: white;
-        background-color: #1f2937;
+        background-color: #1c4cd3;
         border-radius: 5px;
         overflow: hidden;
       }
 
 
 #machine-dropdown{
-        width: auto;
-        height: auto;
-        border: 2px solid black;
+        width: 200px;
+        height: 32px;
+        border: 2px solid #1c4cd3;
         font-size: 18px;
         color: white;
-        background-color: #1f2937;
+        background-color: #1c4cd3;
         border-radius: 5px;
         overflow: hidden;
 }
 
 #software-dropdown{
-    width: auto;
-    height: auto;
-    border: 2px solid black;
+    width: 200px;
+    height: 32px;
+    border: 2px solid #1c4cd3;
     font-size: 18px;
     color: white;
-    background-color: #1f2937;
+    background-color: #1c4cd3;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -78,11 +86,14 @@ input[type=number] {
 
 #totalRenderTime-input, #countTestFrame-input, #totalFrames-input{
     height: 32px;
-    width: 150px;
+    width: 200px;
+}
+
+#display1, #display2{
+    text-decoration: underline #1c4cd3;
 }
 
 p{
-color: #1f2937;
+color: black;
 font-size: larger;
 }
-
