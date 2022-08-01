@@ -1,15 +1,5 @@
 
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  var head = document.getElementsByTagName('HEAD')[0];
-  // Create new link Element
-  var link = document.createElement('link');
-  // set the attributes for link element
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = 'mobileStyle.css';
-  // Append link element to HTML head
-  head.appendChild(link);
-}
+
 
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
@@ -30,7 +20,6 @@ machineTypes = Object.keys(data.data.pricing)
 machineServices = data.data.meta_data.services
 sortedPlansList = data.data.meta_data.plans
 
-console.log(data)
 softwareList = [];
 
 for (i = 0; i < machineServices.length; i++){
@@ -145,7 +134,6 @@ function myFunction() {
     return sortedPlansList.indexOf(a) - sortedPlansList.indexOf(b)
   })
   
-  console.log(oldLst)
   
   if ($("#cost").length > 0){
       $("#cost").empty()
@@ -154,7 +142,9 @@ function myFunction() {
   if ($("#time").length > 0){
     $("#time").empty()
 }
-  console.log(machineCost)
+if ($("#machineCost").length > 0){
+  $("#machineCost").empty()
+}
 
   
   
@@ -174,11 +164,15 @@ function myFunction() {
     document.getElementById("container3").style.border = "solid #1c4cd3"
 
     document.getElementById("display1").innerHTML = "Cost in Credits";
-    document.getElementById("display2").innerHTML = "Time (hour/mins)";          
+    document.getElementById("display2").innerHTML = "Time (hour/mins)";
+    document.getElementById("display3").innerHTML = "Cost per Machine-Hour";          
 
     document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
     document.getElementById("time").innerHTML += time + "<br/>";
+
+    document.getElementById("machineCost").innerHTML += machineCost[plan].cost.toFixed(2) + "<br/>";
     
+    console.log(machineCost)
   }
   
 }   
@@ -197,3 +191,4 @@ $(window).load(function(){
     }
   })
 });
+

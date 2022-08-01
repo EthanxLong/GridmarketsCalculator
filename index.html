@@ -34,7 +34,7 @@ tailwind.config = {
     
     <form>
             
-    <div class="flex items-center flex-column flex-wrap justify-center space-x-10">
+    <div class="container">
 
         <div class="item">
             <select id="software-dropdown" name="renderer">
@@ -56,22 +56,22 @@ tailwind.config = {
 
     </div>
 
-    <div class="flex flex-row flex-wrap justify-center space-x-10">
+    <div class="container">
         <div class="item">
-            <label for="AVGframes"></label>
-            <input id="totalRenderTime-input" type="number" placeholder="Total Render Time" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+            <label for="AVGframes">Total Render Time</label>
+            <input id="totalRenderTime-input" type="number" placeholder="" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
         </div>
 
         <div class="item">
-            <label for="AVGframes"></label>
-            <input id="countTestFrame-input" type="number" placeholder="Count of test frames" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+            <label for="AVGframes">Count of Test Frames</label>
+            <input id="countTestFrame-input" type="number" placeholder="" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
         </div>
 
         <div class="item">
-            <label for="Totalframes"></label>
-            <input id="totalFrames-input" type="number" placeholder="Total Frames" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+            <label for="Totalframes">Total Frames</label>
+            <input id="totalFrames-input" type="number" placeholder="" class="bg-white bg-clip-padding border border-solid border-blue-300 rounded transition ease-in-out m-0 focus:text-blue-700 focus:bg-white focus:border-blue-600 focus:outline-none">
         </div>
-
+        
     </div>
 
         <div class="container2">
@@ -90,10 +90,17 @@ tailwind.config = {
             <br> 
             <p class="font-sans " id="time"></p>
         </div>
+        <div class="container2">
+            <p class="font-sans " id="display3"></p>
+            <br>
+            <p class="font-sans " id="machineCost"></p>
+        </div>
     </div>
 
 
+
     </form>
+
  
 </body>
 </html>

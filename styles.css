@@ -1,3 +1,20 @@
+@media (max-width: 900px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+    }
+
+    #display1, #cost, #display2, #display3, #time, #machineCost{
+
+        font-size: small;
+
+    }
+
+}
+
 body {
     position: absolute;
   left: 50%;
@@ -21,10 +38,8 @@ input[type=number] {
 
 .container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px
 }
 
@@ -32,7 +47,7 @@ input[type=number] {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: auto;
     flex-direction: column;
     padding: 25px;
 }
@@ -40,8 +55,8 @@ input[type=number] {
 .container3 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 150px;
+    align-items:center;
+    height: auto;
     flex-direction: row;
 }
 
@@ -89,7 +104,7 @@ input[type=number] {
     width: 200px;
 }
 
-#display1, #display2{
+#display1, #display2, #display3{
     text-decoration: underline #1c4cd3;
 }
 
@@ -97,3 +112,8 @@ p{
 color: black;
 font-size: larger;
 }
+
+input, label {
+    display:block;
+}
+
