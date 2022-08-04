@@ -1,6 +1,3 @@
-
-
-
 //fetch("https://api.gridmarkets.com:8003/api/render/1.0/pricing", {
 //  method: 'GET',
 //  headers: {
@@ -15,6 +12,7 @@ fetch("API_pricing-1657772478846.json", {
   })
   .then(function(resp) {return resp.json() })
   .then(function(data) {
+    
   sortedMachineList = data.data.meta_data.machine_types
   machineTypes = Object.keys(data.data.pricing)
   machineServices = data.data.meta_data.services
