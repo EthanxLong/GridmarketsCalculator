@@ -179,17 +179,17 @@ if ($("#service").length > 0){
 
     document.getElementById("container3").style.border = "solid #1c4cd3"
 
-    document.getElementById("serviceLevel").innerHTML = "Service level";
-    document.getElementById("display1").innerHTML = "Credits";
-    document.getElementById("display2").innerHTML = "Elapsed Time (HH:mm)";
-    document.getElementById("display3").innerHTML = "Cost Machine-Hour";
+    document.getElementById("serviceLevel").innerHTML = "Service Level";
+    document.getElementById("display1").innerHTML = "Total Credits";
+    document.getElementById("display2").innerHTML = "Elapsed Time (HH:MM)";
+    document.getElementById("display3").innerHTML = "Credits/Mach-Hr";
     
     document.getElementById("service").innerHTML += plan + "<br/>"
 
     document.getElementById("cost").innerHTML += price.toFixed(2) + "<br/>";
     document.getElementById("time").innerHTML += time + "<br/>";
 
-    document.getElementById("machineCost").innerHTML += machineCost[plan].cost.toFixed(2) + "<br/>";
+    document.getElementById("machineCost").innerHTML +=  machineCost[plan].cost.toFixed(2) + "<br/>";
     
     console.log(machineCost)
   }
