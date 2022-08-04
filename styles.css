@@ -7,9 +7,9 @@
         gap: 20px
     }
 
-    #display1, #cost, #display2, #display3, #time, #machineCost{
+    #service, #display1, #cost, #display2, #display3, #time, #machineCost, #serviceLevel{
 
-        font-size: small;
+        font-size:xx-small
 
     }
 
@@ -100,18 +100,19 @@ input[type=number] {
 }
 
 
-#totalRenderTime-input, #countTestFrame-input, #totalFrames-input{
+#averageframesInput, #totalFrames-input{
     height: 32px;
     width: 200px;
 }
 
-#display1, #display2, #display3{
+#serviceLevel, #display1, #display2, #display3{
     text-decoration: underline #1c4cd3;
 }
 
 p{
 color: black;
 font-size: larger;
+white-space: nowrap
 }
 
 input {

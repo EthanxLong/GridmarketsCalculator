@@ -111,19 +111,32 @@ document
 
 });
 
+function success() {
+  if(document.getElementById("averageframesInput").value==="") { 
+           document.getElementById('btn').disabled = true; 
+       } else { 
+           document.getElementById('btn').disabled = false;
+       }
+   }
+
 document.getElementById("btn").addEventListener("click", myFunction);   
 function myFunction() {
 
   machineValue = document.getElementById("machine-dropdown").value
   renderValue = document.getElementById("renderer-dropdown").value
 
-  tRenTimeInput = document.getElementById("totalRenderTime-input").value
+  //cTestFrameInput = document.getElementById("countTestFrame-input").value
+  //tRenTimeInput = document.getElementById("totalRenderTime-input").value
+
+
   totalframesInput = document.getElementById("totalFrames-input").value
-  cTestFrameInput = document.getElementById("countTestFrame-input").value
+  averageframesInput = document.getElementById("averageframesInput").value
 
+  // averageframesInput = (tRenTimeInput/cTestFrameInput)
 
-  averageframesInput = (tRenTimeInput/cTestFrameInput)
-
+  if ((averageframesInput || totalframesInput) < 0 ){
+    document.getElementById('btn').disabled = True;
+  }
 
   machineCost = data.data.pricing[machineValue][renderValue]
 
@@ -145,7 +158,9 @@ function myFunction() {
 if ($("#machineCost").length > 0){
   $("#machineCost").empty()
 }
-
+if ($("#service").length > 0){
+  $("#service").empty()
+}
   
   
   for (i = 0; i < oldLst.length; i++){
@@ -155,19 +170,23 @@ if ($("#machineCost").length > 0){
     estWall = (totalframesInput > conc) ? (averageframesInput * Math.ceil(totalframesInput/conc)) : averageframesInput
     price = (averageframesInput/60) * (totalframesInput * machineCost[plan].cost)
 
-    time = Math.floor(estWall/60) + "h " + (estWall % 60).toFixed(0) + "m"
-
-    if (Math.floor(estWall/60) == 0){
-      time = (estWall % 60).toFixed(0) + "m"
+    if ((estWall % 60).toFixed(0) < 10){
+      time = Math.floor(estWall/60) + ":" + "0" + (estWall % 60).toFixed(0)
+    } else {
+      time = Math.floor(estWall/60) + ":" + (estWall % 60).toFixed(0)
     }
+    
 
     document.getElementById("container3").style.border = "solid #1c4cd3"
 
-    document.getElementById("display1").innerHTML = "Cost in Credits";
-    document.getElementById("display2").innerHTML = "Time (hour/mins)";
-    document.getElementById("display3").innerHTML = "Cost per Machine-Hour";          
+    document.getElementById("serviceLevel").innerHTML = "Service level";
+    document.getElementById("display1").innerHTML = "Credits";
+    document.getElementById("display2").innerHTML = "Elapsed Time (HH:mm)";
+    document.getElementById("display3").innerHTML = "Cost Machine-Hour";
+    
+    document.getElementById("service").innerHTML += plan + "<br/>"
 
-    document.getElementById("cost").innerHTML += plan + ": " + price.toFixed(2) + "<br/>";
+    document.getElementById("cost").innerHTML += price.toFixed(2) + "<br/>";
     document.getElementById("time").innerHTML += time + "<br/>";
 
     document.getElementById("machineCost").innerHTML += machineCost[plan].cost.toFixed(2) + "<br/>";
