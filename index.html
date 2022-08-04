@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS only -->
-
-    <script src="scripts.js"></script>
+    <script src="CalculatorScripts.js"></script>
     <link rel="stylesheet" type="text/css"   href="styles.css">
     <title>Gridmarkets Calculator</title>
     <script>
@@ -32,8 +30,8 @@ tailwind.config = {
 </head>
 <body>
     
-    <form>
-            
+    <div style="border: 3px solid blue">
+    <form>    
     <div class="container">
 
         <div class="item">
@@ -72,9 +70,11 @@ tailwind.config = {
         <div class="container2">
             <button id="btn" type="button" class="inline-block px-6 py-2.5 bg-blue text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-900 hover:shadow-lg focus:bg-blue-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-900 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
         </div>
-        
     </form>
+
+    <hr id= "line"/>
     <div class="container3" id="container3">
+        
         <div class="container2">
             <p class="font-sans " id="serviceLevel"></p>
             <br>  
@@ -96,7 +96,7 @@ tailwind.config = {
             <p class="font-sans " id="cost"></p>  
         </div>
     </div>
-
+</div>
 
 
     

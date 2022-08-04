@@ -15,6 +15,14 @@
 
 }
 
+#line {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #1c4cd3;
+    height: 2px;
+    border-top: 2px solid #1c4cd3;
+    display:none;
+}
 
 body {
     position: absolute;
