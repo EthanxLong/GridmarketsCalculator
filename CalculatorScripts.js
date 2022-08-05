@@ -21,6 +21,9 @@ fetch("API_pricing-1657772478846.json", {
   softwareList = [];
   blue = "#1c4cd3"
   
+  
+  
+  
   for (i = 0; i < machineServices.length; i++){
   option = document.createElement('option')
   word = machineServices[i]
@@ -30,6 +33,8 @@ fetch("API_pricing-1657772478846.json", {
       softwareList.push(word)
     } 
   }
+
+  
   
   document
   .getElementById("software-dropdown")
@@ -43,7 +48,10 @@ fetch("API_pricing-1657772478846.json", {
   
     if (!(lst.includes(software))){
       $("#renderer-dropdown").empty();
-      $('#renderer-dropdown').append('<option value="" disabled selected>Select Renderer </option>') 
+      $('#renderer-dropdown').append('<option value="" disabled selected>Select Renderer </option>')
+      
+      
+
       for(i = 0; i < machineServices.length; i++){
         if (machineServices[i].includes(software)){
           lst.push(machineServices[i])
@@ -67,6 +75,7 @@ fetch("API_pricing-1657772478846.json", {
   document
     .getElementById("renderer-dropdown")
     .addEventListener("change", (e) => {
+      
       machineValue = document.getElementById('machine-dropdown').value
       renderValue = document.getElementById('renderer-dropdown').value
       renderer = e.target.value
@@ -197,6 +206,11 @@ fetch("API_pricing-1657772478846.json", {
     }
     
   }   
+
+
+
+
+
     
   });
   
