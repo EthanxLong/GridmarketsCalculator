@@ -30,7 +30,18 @@ fetch("API_pricing-1657772478846.json", {
         softwareList.push(word)
       } 
 
+  for (i = 0; i < machineServices.length; i++){
+  option = document.createElement('option')
+  word = machineServices[i]
+    if (!(word.includes('-'))){
+      option.text = word
+      document.getElementById('software-dropdown').add(option)
+      softwareList.push(word)
+    } 
+
   }
+
+  
   
   for (i = 0; i < machineServices.length; i++){
     setSoftware();
@@ -47,7 +58,10 @@ fetch("API_pricing-1657772478846.json", {
   
     if (!(lst.includes(software))){
       $("#renderer-dropdown").empty();
-      $('#renderer-dropdown').append('<option value="" disabled selected>Select Renderer </option>') 
+      $('#renderer-dropdown').append('<option value="" disabled selected>Select Renderer </option>')
+      
+      
+
       for(i = 0; i < machineServices.length; i++){
         if (machineServices[i].includes(software)){
           lst.push(machineServices[i])
@@ -105,7 +119,38 @@ fetch("API_pricing-1657772478846.json", {
   document
     .getElementById("renderer-dropdown")
     .addEventListener("change", (e) => {
+
       setMachine(e);
+
+      
+      machineValue = document.getElementById('machine-dropdown').value
+      renderValue = document.getElementById('renderer-dropdown').value
+      renderer = e.target.value
+      machineArray = data.data.pricing
+  
+      lst = [];
+      newlst = [];
+  
+      if (!(lst.includes(machineValue))){
+        $("#machine-dropdown").empty();
+        $('#machine-dropdown').append('<option value="" disabled selected>Select Machine </option>')
+        for (const [key, value] of Object.entries(data.data.pricing)) {
+          if (renderValue in value){
+            lst.push(key)
+          }
+          }
+        
+        lst.sort(function(a, b) {
+          return sortedMachineList.indexOf(a) - sortedMachineList.indexOf(b)
+        })
+  
+      for (i = 0; i < lst.length; i++){
+        option = document.createElement('option')
+        option.text = lst[i]
+        document.getElementById('machine-dropdown').add(option)
+      }
+    }
+
       
     });
     
@@ -273,6 +318,7 @@ fetch("API_pricing-1657772478846.json", {
     }
     
 
+
   }
     
   }  
@@ -315,6 +361,14 @@ window.addEventListener('load', (event) => {
   
 
 });
+
+  }   
+
+
+
+
+
+
     
   });
   
