@@ -12,7 +12,7 @@ fetch("API_pricing-1657772478846.json", {
   })
   .then(function(resp) {return resp.json() })
   .then(function(data) {
-    
+
   sortedMachineList = data.data.meta_data.machine_types
   machineTypes = Object.keys(data.data.pricing)
   machineServices = data.data.meta_data.services
@@ -20,20 +20,24 @@ fetch("API_pricing-1657772478846.json", {
   
   softwareList = [];
   blue = "#1c4cd3"
-  
-  for (i = 0; i < machineServices.length; i++){
-  option = document.createElement('option')
-  word = machineServices[i]
-    if (!(word.includes('-'))){
-      option.text = word
-      document.getElementById('software-dropdown').add(option)
-      softwareList.push(word)
-    } 
+
+  function setSoftware() {
+    option = document.createElement('option')
+    word = machineServices[i]
+      if (!(word.includes('-'))){
+        option.text = word
+        document.getElementById('software-dropdown').add(option)
+        softwareList.push(word)
+      } 
+
   }
   
-  document
-  .getElementById("software-dropdown")
-  .addEventListener("change", (e) => {
+  for (i = 0; i < machineServices.length; i++){
+    setSoftware();
+  }
+
+  
+  function setRenderer(e){
     softwareValue = document.getElementById('software-dropdown').value
     software = e.target.value
     machineServices = data.data.meta_data.services
@@ -59,41 +63,49 @@ fetch("API_pricing-1657772478846.json", {
       }
     }
   
-    
+
+  }
+  
+  document
+  .getElementById("software-dropdown")
+  .addEventListener("change", (e) => {
+    setRenderer(e);
   })
   
-  
+  function setMachine(e){
+    machineValue = document.getElementById('machine-dropdown').value
+    renderValue = document.getElementById('renderer-dropdown').value
+    renderer = e.target.value
+    machineArray = data.data.pricing
+
+    lst = [];
+    newlst = [];
+
+    if (!(lst.includes(machineValue))){
+      $("#machine-dropdown").empty();
+      $('#machine-dropdown').append('<option value="" disabled selected>Select Machine </option>')
+      for (const [key, value] of Object.entries(data.data.pricing)) {
+        if (renderValue in value){
+          lst.push(key)
+        }
+        }
+      
+      lst.sort(function(a, b) {
+        return sortedMachineList.indexOf(a) - sortedMachineList.indexOf(b)
+      })
+
+    for (i = 0; i < lst.length; i++){
+      option = document.createElement('option')
+      option.text = lst[i]
+      document.getElementById('machine-dropdown').add(option)
+    }
+  }
+  }
   
   document
     .getElementById("renderer-dropdown")
     .addEventListener("change", (e) => {
-      machineValue = document.getElementById('machine-dropdown').value
-      renderValue = document.getElementById('renderer-dropdown').value
-      renderer = e.target.value
-      machineArray = data.data.pricing
-  
-      lst = [];
-      newlst = [];
-  
-      if (!(lst.includes(machineValue))){
-        $("#machine-dropdown").empty();
-        $('#machine-dropdown').append('<option value="" disabled selected>Select Machine </option>')
-        for (const [key, value] of Object.entries(data.data.pricing)) {
-          if (renderValue in value){
-            lst.push(key)
-          }
-          }
-        
-        lst.sort(function(a, b) {
-          return sortedMachineList.indexOf(a) - sortedMachineList.indexOf(b)
-        })
-  
-      for (i = 0; i < lst.length; i++){
-        option = document.createElement('option')
-        option.text = lst[i]
-        document.getElementById('machine-dropdown').add(option)
-      }
-    }
+      setMachine(e);
       
     });
     
@@ -109,18 +121,81 @@ fetch("API_pricing-1657772478846.json", {
       lst1 = [];
   
   });
-  
-  function success() {
-    if(document.getElementById("averageframesInput").value==="") { 
-             document.getElementById('btn').disabled = true; 
-         } else { 
-             document.getElementById('btn').disabled = false;
-         }
-     }
+
+
+
   
   document.getElementById("btn").addEventListener("click", myFunction);   
   function myFunction() {
+    if ($(window).width() < 480) {
+      $( "#deleteWhenMobile" ).remove();
+      $( "#deleteWhenMobile1" ).remove();
+
+      machineValue = document.getElementById("machine-dropdown").value
+      renderValue = document.getElementById("renderer-dropdown").value
   
+      totalframesInput = document.getElementById("totalFrames-input").value
+      averageframesInput = document.getElementById("averageframesInput").value
+    
+      if ((averageframesInput || totalframesInput) < 0 ){
+        document.getElementById('btn').disabled = True;
+      }
+    
+      machineCost = data.data.pricing[machineValue][renderValue]
+    
+      oldLst = Object.keys(machineCost);
+      sortedPlansList = data.data.meta_data.plans
+    
+      oldLst.sort(function(a, b) {
+        return sortedPlansList.indexOf(a) - sortedPlansList.indexOf(b)
+      })
+      
+      
+      if ($("#cost").length > 0){
+          $("#cost").empty()
+      }
+    
+      if ($("#time").length > 0){
+        $("#time").empty()
+      }
+      if ($("#machineCost").length > 0){
+        $("#machineCost").empty()
+      }
+      if ($("#service").length > 0){
+        $("#service").empty()
+      }
+      
+      
+      for (i = 0; i < oldLst.length; i++){
+        plan = oldLst[i]
+        conc = machineCost[plan].max_machines
+    
+        estWall = (totalframesInput > conc) ? (averageframesInput * Math.ceil(totalframesInput/conc)) : averageframesInput
+        price = (averageframesInput/60) * (totalframesInput * machineCost[plan].cost)
+    
+        if ((estWall % 60).toFixed(0) < 10){
+          time = Math.floor(estWall/60) + ":" + "0" + (estWall % 60).toFixed(0)
+        } else {
+          time = Math.floor(estWall/60) + ":" + (estWall % 60).toFixed(0)
+        }
+        
+    
+        //document.getElementById("container3").style.border = "solid " + blue
+  
+        document.getElementById("line").style.display = "inherit";
+        
+        document.getElementById("serviceLevel").innerHTML = "Service Level";
+        document.getElementById("display1").innerHTML = "Total Credits";
+    
+        document.getElementById("cost").innerHTML += price.toFixed(2) + "<br/>";
+        document.getElementById("service").innerHTML += plan + "<br/>"
+  
+        
+        console.log(machineCost)
+   
+      }
+      
+    } else {
     machineValue = document.getElementById("machine-dropdown").value
     renderValue = document.getElementById("renderer-dropdown").value
   
@@ -153,13 +228,13 @@ fetch("API_pricing-1657772478846.json", {
   
     if ($("#time").length > 0){
       $("#time").empty()
-  }
-  if ($("#machineCost").length > 0){
-    $("#machineCost").empty()
-  }
-  if ($("#service").length > 0){
-    $("#service").empty()
-  }
+    }
+    if ($("#machineCost").length > 0){
+      $("#machineCost").empty()
+    }
+    if ($("#service").length > 0){
+      $("#service").empty()
+    }
     
     
     for (i = 0; i < oldLst.length; i++){
@@ -194,21 +269,53 @@ fetch("API_pricing-1657772478846.json", {
 
       
       console.log(machineCost)
+ 
     }
     
-  }   
+
+  }
+    
+  }  
+  
+  
+
+window.addEventListener('load', (event) => {
+  queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  
+  const softwareURL = urlParams.get('utm_software')
+  document.getElementById("software-dropdown").value = softwareURL
+  console.log(softwareURL);
+
+  document
+  .getElementById("software-dropdown")
+  .addEventListener("load", (e) => {
+    setSoftware(e);
+  })
+  
+  const rendererURL = softwareURL + " - " + urlParams.get('utm_renderer')
+  console.log(rendererURL);
+
+  document
+  .getElementById("software-dropdown")
+  .addEventListener("load", (e) => {
+    setRenderer(e);
+  })
+
+  const machineURL = urlParams.get('utm_machine')
+  console.log(machineURL);
+  
+  document
+  .getElementById("software-dropdown")
+  .addEventListener("load", (e) => {
+    setMachine(e);
+  })
+  
+
+  
+
+});
     
   });
   
-  // JavaScript for label effects only
-  $(window).load(function(){
-    $(".col-3 input").val("");
-    
-    $(".input-effect input").focusout(function(){
-      if($(this).val() != ""){
-        $(this).addClass("has-content");
-      }else{
-        $(this).removeClass("has-content");
-      }
-    })
-  });
+
